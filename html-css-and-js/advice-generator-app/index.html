@@ -3,9 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Advice Generator App</title>
 </head>
-<body>
+<body class="h-screen w-screen flex items-center justify-center bg-[hsl(218,23%,16%)]">
+  <div class="flex flex-col items-center gap-4 bg-[hsl(217,19%,24%)] pt-8 pb-8 pl-4 pr-4 relative w-[90%] md:w-[40%]
+              rounded-xl">
+    <span class="text-[10px] text-[hsl(150,100%,66%)] font-bold letter-spacing-5 tracking-[7px]">ADVICE #</span>
+    <p class="text-center text-[hsl(193,38%,86%)] text-2xl font-bold">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum rem molestiae veritatis
+       possimus at quo, sint reiciendis sed 
+    </p>
+    <div class="mb-4">
+      <img class="md:hidden" src="images/pattern-divider-mobile.svg" alt="pattern-divider-image">
+      <img class="max-md:hidden" src="images/pattern-divider-mobile.svg" alt="pattern-divider-image">
+    </div>
+    <button class="bg-[hsl(150,100%,66%)] p-4 rounded-full absolute bottom-0 translate-y-[50%] cursor-pointer
+                    hover:shadow-[0px_0px_20px_hsl(150,100%,66%)] transition-all duration-200 ease-in-out">
+      <img src="/images/icon-dice.svg" alt="dice-icon">
+    </button>
+    
+  </div>
 </body>
 </html>
