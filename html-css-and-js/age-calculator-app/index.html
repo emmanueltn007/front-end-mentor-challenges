@@ -3,9 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <title>Age Calculator App</title>
 </head>
-<body>
+<body class="bg-[hsl(0,0%,94%)] flex items-center justify-center h-screen w-screen sm:p-4">
+  <div class="flex flex-col gap-8 bg-white rounded-tl-xl rounded-tr-xl rounded-bl-xl 
+              rounded-br-[128px] pl-4 pr-4 pt-8 pb-8 md:w-[50%] max-w-[500px]">
+    <div class="flex gap-4 md:gap-8">
+
+      <div class="flex flex-col gap-2">
+        <label for="day" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
+          DAY
+        </label>
+        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md" type="number" id="day" min="1" max="31" placeholder="DD">
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="month" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
+          MONTH
+        </label>
+        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md" type="number" id="month" placeholder="MM">
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <label for="year" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
+          YEAR
+        </label>
+        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md" type="number" id="year" placeholder="YYYY">
+      </div>
+    </div>
+
+    <div class="flex justify-center relative">
+      <hr class="relative w-full">
+      <img class="cursor-pointer bg-[hsl(259,100%,65%)] -translate-y-[50%] md:right-0 rounded-full p-2 w-12 absolute hover:bg-black transition-all duration-150 ease-in-out"
+           src="assets/images/icon-arrow.svg" alt="arrow-icon-image">
+    </div>
+
+    <div class="leading-none">
+      <div class="flex items-center">
+        <span class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
+          --
+        </span>
+         <h1 class="text-black font-bold text-[64px] italic">
+          years
+        </h1>
+      </div>
+      <div class="flex items-center">
+        <span class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
+          --
+        </span>
+        <h1 class="text-black font-bold text-[64px] italic">
+          months
+        </h1>
+      </div>
+      <div class="flex items-center">
+        <span class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
+          --
+        </span>
+        <h1 class="text-black font-bold text-[64px] italic">
+          days
+        </h1>
+      </div>
+    </div>
+  </div>
 </body>
 </html>

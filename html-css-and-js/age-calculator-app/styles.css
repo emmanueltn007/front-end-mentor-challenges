@@ -1,1 +1,20 @@
 @import "tailwindcss";
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+@tailwind utilities;
+
+@layer utilities {
+    .no-arrow::-webkit-inner-spin-button,
+    .no-arrow::-webkit-outer-spin-button {
+        @apply appearance-none;
+        margin: 0;
+    }
+
+    .no-arrow {
+        -moz-appearance: textfield;
+        appearance: textfield;
+    }
+}
