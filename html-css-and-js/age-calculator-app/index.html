@@ -15,36 +15,41 @@
     <div class="flex gap-4 md:gap-8">
 
       <div class="flex flex-col gap-2">
-        <label for="day" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
+        <label for="day-input" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
           DAY
         </label>
-        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md" type="number" id="day" min="1" max="31" placeholder="DD">
+        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md font-bold placeholder:font-bold" type="number" id="day-input" min="1" max="31" placeholder="DD">
+        <p id="js-days-alert" class="text-red-500 text-[10px] italic"></p>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label for="month" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
+        <label for="month-input" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
           MONTH
         </label>
-        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md" type="number" id="month" placeholder="MM">
+        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md font-bold placeholder:font-bold" type="number" id="month-input" min="1" max="12" placeholder="MM">
+        <p id="js-months-alert" class="text-red-500 text-[10px] italic"></p>
       </div>
 
       <div class="flex flex-col gap-2">
-        <label for="year" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
+        <label for="year-input" class="text-[12px] text-[hsl(0,1%,44%)] font-bold">
           YEAR
         </label>
-        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md" type="number" id="year" placeholder="YYYY">
+        <input class="no-arrow w-24 p-4 border border-[hsl(0,1%,44%)] rounded-md font-bold placeholder:font-bold" type="number" id="year-input" min="1900" placeholder="YYYY">
+        <p id="js-year-alert" class="text-red-500 text-[10px] italic"></p>
       </div>
     </div>
 
     <div class="flex justify-center relative">
       <hr class="relative w-full">
-      <img class="cursor-pointer bg-[hsl(259,100%,65%)] -translate-y-[50%] md:right-0 rounded-full p-2 w-12 absolute hover:bg-black transition-all duration-150 ease-in-out"
-           src="assets/images/icon-arrow.svg" alt="arrow-icon-image">
+      <button id="js-button" class="cursor-pointer bg-[hsl(259,100%,65%)] -translate-y-[50%] md:right-0 rounded-full p-2 absolute hover:bg-black transition-all duration-150 ease-in-out">
+        <img class="w-8"
+             src="assets/images/icon-arrow.svg" alt="arrow-icon-image">
+      </button>
     </div>
 
     <div class="leading-none">
       <div class="flex items-center">
-        <span class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
+        <span id="js-user-years" class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
           --
         </span>
          <h1 class="text-black font-bold text-[64px] italic">
@@ -52,7 +57,7 @@
         </h1>
       </div>
       <div class="flex items-center">
-        <span class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
+        <span  id="js-user-months" class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
           --
         </span>
         <h1 class="text-black font-bold text-[64px] italic">
@@ -60,7 +65,7 @@
         </h1>
       </div>
       <div class="flex items-center">
-        <span class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
+        <span id="js-user-days" class="text-[81px] text-[hsl(259,100%,65%)] font-bold italic">
           --
         </span>
         <h1 class="text-black font-bold text-[64px] italic">
@@ -69,5 +74,7 @@
       </div>
     </div>
   </div>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
