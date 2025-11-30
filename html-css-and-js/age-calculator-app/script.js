@@ -68,14 +68,6 @@ function calculateAge () {
     let months = currentMonth -userMonthInput;
     let days = currentDay -userDayInput;
 
-    if( currentMonth < userMonthInput) {
-        years--;
-    }
-
-    if (currentDay >= userDayInput) {
-        months++;
-    }
-
     // fix the months if negative
     if (months < 0) {
         years--;
@@ -84,7 +76,7 @@ function calculateAge () {
 
     // fix the days if negative
     if (days < 0) {
-        months--;
+        months += daysInPreviousMonth;
     }
 
     // Getting last month's number of days
