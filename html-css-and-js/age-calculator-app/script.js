@@ -7,6 +7,7 @@ const yearsAlert = document.querySelector('#js-year-alert');
 const submitBtn = document.querySelector('#js-button');
 const userYearsEl = document.querySelector('#js-user-years');
 const userMonthsEl = document.querySelector('#js-user-months');
+const userDaysEl = document.querySelector('#js-user-days');
 
 const currentYear = new Date().getFullYear();
 const currentMonth = new Date().getMonth() + 1;
@@ -64,21 +65,36 @@ function calculateAge () {
     const userYearInput = parseFloat(yearInput.value);
 
     let years = currentYear - userYearInput;
-    let months = (currentYear - userYearInput) * 12 + currentMonth - userMonthInput -12; 
-    let monthsPassed = months % 12;
-    let daysPassed = 
+    let months = currentMonth -userMonthInput;
+    let days = currentDay -userDayInput;
 
-    if (currentMonth < userMonthInput) {
+    if( currentMonth < userMonthInput) {
         years--;
     }
 
     if (currentDay >= userDayInput) {
-        monthsPassed++;
+        months++;
     }
 
+    // fix the months if negative
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    // fix the days if negative
+    if (days < 0) {
+        months--;
+    }
+
+    // Getting last month's number of days
+    const previousMonth = currentMonth === 1 ? 12 :currentMonth - 1;
+    const previousYear = currentMonth === 1 ? currentYear -1 : currentYear;
+    const daysInPreviousMonth = new Date(previousYear, previousMonth, 0).getDate();
+
     userYearsEl.textContent = years;
-    userMonthsEl.textContent = monthsPassed;
-    userDaysEl.textContent = daysPassed;
+    userMonthsEl.textContent = months;
+    userDaysEl.textContent = days;
 }
 
 submitBtn.addEventListener('click', () => {
