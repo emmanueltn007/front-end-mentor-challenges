@@ -10,7 +10,7 @@
     <header class="flex justify-between pl-16 pr-16 pt-8 pb-8 relative">
       <div class="flex gap-4">
         <img class="w-auto h-6" src="/images/logo.svg" alt="shortly-logo-image">
-        <!--DESKTOP NAV-->
+        
         <ul class="flex gap-4 max-md:hidden text-gray-500 font-bold">
           <li class="cursor-pointer hover:text-black hover:scale-110 transition-all duration-150 ease-in-out">
             Features
@@ -23,9 +23,11 @@
           </li>
         </ul>
       </div>
+
+      <!--DESKTOP NAV-->
       <nav class="flex">
-        <img id="menu-btn" class="md:hidden cursor-pointer" src="/images/icon-menu.svg" alt="hamburger-icon">
-        <img id="close-menu-btn" class="hidden cursor-pointer" src="/images/icon-menu-close.svg" alt="close-menu-icon">
+        <img id="menu-btn" class="md:hidden cursor-pointer w-6" src="/images/icon-menu.svg" alt="hamburger-icon">
+        <img id="close-menu-btn" class="hidden md:hidden cursor-pointer w-6" src="/images/icon-menu-close.svg" alt="close-menu-icon">
         <div class="max-md:hidden flex gap-8">
           <button class="text-gray-500 font-bold cursor-pointer hover:text-black hover:scale-110 transition-all duration-150 ease-in-out">
             Login
@@ -36,12 +38,9 @@
           </button>
         </div>
       </nav>
-    </header>
 
-    <!--HERO SECTION-->
-    <section class="md:flex flex-row-reverse relative mb-32 md:mb-28">
       <!--HIDDEN MOBILE MENU-->
-      <div id="hidden-menu" class="hidden flex-col gap-4 bg-[hsl(257,27%,26%)] p-4 rounded-xl w-[90%] left-[50%] -translate-x-[50%] absolute z-50">
+      <div id="hidden-menu" class="hidden flex-col justify-center bg-[hsl(257,27%,26%)] p-4 rounded-xl w-[90%] min-h-[350px] left-[50%] -translate-x-[50%] translate-y-[25%] absolute z-50">
         <ul class="flex flex-col gap-4 text-white font-bold">
           <li class="cursor-pointer hover:underline underline-2 transition-all duration-150 ease-in-out">
             Features
@@ -64,6 +63,10 @@
           </button>
         </div>
       </div>
+    </header>
+
+    <!--HERO SECTION-->
+    <section class="md:flex flex-row-reverse relative mb-32 md:mb-28">
       <img class="h-88 md:translate-x-[25%] w-full max-w-[500px] z-0" src="/images/illustration-working.svg" alt="hero-image">
       <div class="flex flex-col gap-8 justify-center max-md:items-center max-md:text-center mt-8">
         <h1 class="md:text-5xl text-4xl font-bold md:font-extrabold">
@@ -83,11 +86,12 @@
     <section class="bg-[hsl(257,27%,26%)] bg-[url('/images/bg-shorten-mobile.svg')] md:bg-[url('/images/bg-shorten-desktop.svg')]
                     bg-cover bg-no-repeat bg-center flex-col md:flex-row z-50 absolute -translate-y-[50%] left-1/2 -translate-x-1/2
                    px-6 py-12 w-[90%] rounded-xl flex gap-4 justify-center mx-auto">
-      <input class="bg-white p-4 w-full rounded-md" type="text" placeholder="Shorten a link here...">
-      <button class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer max-md:w-full
+      <input id="js-input-link" class="bg-white p-4 w-full rounded-md" type="text" placeholder="Shorten a link here...">
+      <button id="js-shorten-link-btn" class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer max-md:w-full
                     hover:bg-[hsl(180,97%,76%)] hover:scale-105 transition-all duration-150 ease-in-out w-[40%]">
         Shorten It!
       </button>
+      <p id="js-message-alert" class="text-sm text-[hsl(0,87%,67%)] absolute left-6 bottom-[30%] translate-y-full italic"></p>
     </section>
 
     <section class="bg-gray-300 md:h-[750px] flex items-center text-center justify-center flex-col gap-16 pl-16 pr-16 pt-8 pb-8 z-1 relative">
@@ -170,13 +174,13 @@
           Features
         </h4>
         <div class="flex flex-col">
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Link Shortening
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Branded Links
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Analytics
           </span>
         </div>
@@ -187,13 +191,13 @@
           Resources
         </h4>
         <div class="flex flex-col">
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Blog
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Developers
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Support
           </span>
         </div>
@@ -204,16 +208,16 @@
           Company
         </h4>
         <div class="flex flex-col">
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             About
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Our Team
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Careers
           </span>
-          <span>
+          <span class="hover:scale-110 hover:text-[hsl(180,66%,49%)] transition-all duration-150 ease-in-out cursor-pointer">
             Contact
           </span>
         </div>
@@ -221,16 +225,16 @@
 
       <div class="flex gap-4">
         <a href="#">
-          <img src="/images/icon-facebook.svg" alt="facebook-icon">
+          <img class="hover:scale-110 transition-all duration-150 ease-in-out" src="/images/icon-facebook.svg" alt="facebook-icon">
         </a>
         <a href="#">
-          <img src="/images/icon-twitter.svg" alt="twitter-icon">
+          <img class="hover:scale-110 transition-all duration-150 ease-in-out" src="/images/icon-twitter.svg" alt="twitter-icon">
         </a>
         <a href="#">
-          <img src="/images/icon-pinterest.svg" alt="pinterest-icon">
+          <img class="hover:scale-110 transition-all duration-150 ease-in-out" src="/images/icon-pinterest.svg" alt="pinterest-icon">
         </a>
         <a href="#">
-          <img src="/images/icon-instagram.svg" alt="instagram-icon">
+          <img class="hover:scale-110 transition-all duration-150 ease-in-out" src="/images/icon-instagram.svg" alt="instagram-icon">
         </a>
       </div>
     </footer>
