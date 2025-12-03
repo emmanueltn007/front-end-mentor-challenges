@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="/styles.css">
     <title>Url Shortening App</title>
   </head>
-  <body class="h-screen w-screen">
+  <body class="h-screen w-screen overflow-x-hidden">
     <header class="flex justify-between pl-16 pr-16 pt-8 pb-8 relative">
       <div class="flex gap-4">
         <img class="w-auto h-6" src="/images/logo.svg" alt="shortly-logo-image">
+        <!--DESKTOP NAV-->
         <ul class="flex gap-4 max-md:hidden text-gray-500 font-bold">
           <li class="cursor-pointer hover:text-black hover:scale-110 transition-all duration-150 ease-in-out">
             Features
@@ -23,7 +24,7 @@
         </ul>
       </div>
       <nav class="flex">
-        <img class="md:hidden" src="/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="hamburger-icon">
+        <img class="md:hidden cursor-pointer" src="/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="hamburger-icon">
         <div class="max-md:hidden flex gap-8">
           <button class="text-gray-500 font-bold cursor-pointer hover:text-black hover:scale-110 transition-all duration-150 ease-in-out">
             Login
@@ -34,10 +35,35 @@
           </button>
         </div>
       </nav>
+
+      <!--HIDDEN MOBILE MENU-->
+      <div class="hidden flex-col gap-4 bg-[hsl(257,27%,26%)] p-4 rounded-xl w-[90%] left-0 absolute z-50">
+        <ul class="flex flex-col gap-4 text-white font-bold">
+          <li class="cursor-pointer hover:underline underline-2 transition-all duration-150 ease-in-out">
+            Features
+          </li>
+          <li class="cursor-pointer hover:underline underline-2 transition-all duration-150 ease-in-out">
+            Pricing
+          </li>
+          <li class="cursor-pointer hover:underline underline-2 transition-all duration-150 ease-in-out">
+            Resources
+          </li>
+        </ul>
+        <hr class="text-white h-2">
+        <div class="flex flex-col gap-4">
+          <button class="text-white font-bold cursor-pointer hover:scale-110 transition-all duration-150 ease-in-out">
+            Login
+          </button>
+          <button class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-3xl cursor-pointer 
+                          hover:bg-[hsl(180,97%,76%)] hover:scale-90 transition-all duration-150 ease-in-out">
+            Sign Up
+          </button>
+        </div>
+      </div>
     </header>
 
     <section class="md:flex flex-row-reverse relative mb-32 md:mb-28">
-      <img class="h-88 translate-x-[25%]" src="/images/illustration-working.svg" alt="hero-image">
+      <img class="h-88 translate-x-[25%] z-0" src="/images/illustration-working.svg" alt="hero-image">
       <div class="flex flex-col gap-8 justify-center max-md:items-center max-md:text-center mt-8">
         <h1 class="md:text-5xl text-4xl font-bold md:font-extrabold">
           More than just shorter links
@@ -58,7 +84,7 @@
                    p-12 w-[90%] rounded-xl flex gap-4 justify-center mx-auto">
                    <input class="bg-white p-4 w-full rounded-md" type="text" placeholder="Shorten a link here...">
                    <button class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer max-md:w-full
-                                  hover:bg-[hsl(180,97%,76%)] hover:scale-110 transition-all duration-150 ease-in-out w-[40%]">
+                                  hover:bg-[hsl(180,97%,76%)] hover:scale-105 transition-all duration-150 ease-in-out w-[40%]">
                       Shorten It!
                    </button>
     </section>
@@ -73,12 +99,14 @@
         </p>
       </div>
 
-      <div class="flex flex-col md:flex-row items-center gap-8">
+      <div class="flex flex-col md:flex-row items-center gap-16 relative">
+        <div class="bg-[hsl(180,66%,49%)] absolute z-0 w-2 h-[500px] md:w-full md:h-2 md:translate-y-full"></div>
         <div class="bg-white md:h-[200px] w-full md:w-[33%] flex flex-col gap-4 pl-4 pr-4 pb-4 p-8 relative rounded-xl">
-          <img class="bg-[hsl(257,27%,26%)] absolute top-0 left-[50%] -translate-x-[50%] -translate-y-[50%]
-                      p-4 rounded-full" 
-                src="/images/icon-brand-recognition.svg" alt="brand-recognition-icon">
-          <h4 class="font-semibold">
+          <div class="bg-[hsl(257,27%,26%)] absolute top-0 left-[50%] -translate-x-[50%] md:translate-x-0 md:left-[10%] -translate-y-[50%]
+                      p-4 rounded-full">
+            <img class="w-6" src="/images/icon-brand-recognition.svg" alt="brand-recognition-icon">
+          </div>
+          <h4 class="md:text-xl md:font-bold font-semibold">
             Brand Recognition
           </h4>
           <p class="text-gray-400 font-semibold">
@@ -88,11 +116,12 @@
         </div>
 
         <div class="bg-white md:h-[200px] w-full md:w-[33%] flex flex-col gap-4 pl-4 pr-4 pb-4 p-8  relative rounded-xl
-                    md:translate-y-[25%]">
-          <img class="bg-[hsl(257,27%,26%)] absolute top-0 left-[50%] -translate-x-[50%] -translate-y-[50%]
-                      p-4 rounded-full" 
-                src="/images/icon-detailed-records.svg" alt="detailed-records-icon">
-          <h4 class="font-semibold">
+                    md:translate-y-[15%]">
+            <div class="bg-[hsl(257,27%,26%)] absolute top-0 left-[50%] -translate-x-[50%] md:translate-x-0 md:left-[10%] -translate-y-[50%]
+                      p-4 rounded-full">
+              <img class="w-6" src="/images/icon-detailed-records.svg" alt="detailed-records-icon">
+            </div>
+          <h4 class="md:text-xl md:font-bold font-semibold">
             Detailed Records
           </h4>
           <p class="text-gray-400 font-semibold">
@@ -102,11 +131,12 @@
         </div>
 
         <div class="bg-white md:h-[200px] w-full md:w-[33%] flex flex-col gap-4 pl-4 pr-4 pb-4 p-8 relative rounded-xl
-                      md:translate-y-[50%]">
-          <img class="bg-[hsl(257,27%,26%)] absolute top-0 left-[50%] -translate-x-[50%] -translate-y-[50%]
-                      p-4 rounded-full" 
-                src="/images/icon-fully-customizable.svg" alt="fully-customizable-icon">
-          <h4 class="font-semibold">
+                      md:translate-y-[30%]">
+            <div class="bg-[hsl(257,27%,26%)] absolute top-0 left-[50%] -translate-x-[50%] md:translate-x-0 md:left-[10%] -translate-y-[50%]
+                      p-4 rounded-full">
+              <img class="w-6"  src="/images/icon-fully-customizable.svg" alt="fully-customizable-icon">
+            </div>
+          <h4 class="md:text-xl md:font-bold font-semibold">
             Fully Customizable
           </h4>
           <p class="text-gray-400 font-semibold">

@@ -1,4 +1,0 @@
-[build]
-base = "html-css-and-js/url-shortening-app"
-publish = "dist"
-command = "npm run build"
