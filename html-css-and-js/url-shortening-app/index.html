@@ -24,7 +24,8 @@
         </ul>
       </div>
       <nav class="flex">
-        <img class="md:hidden cursor-pointer" src="/images/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg" alt="hamburger-icon">
+        <img id="menu-btn" class="md:hidden cursor-pointer" src="/images/icon-menu.svg" alt="hamburger-icon">
+        <img id="close-menu-btn" class="hidden cursor-pointer" src="/images/icon-menu-close.svg" alt="close-menu-icon">
         <div class="max-md:hidden flex gap-8">
           <button class="text-gray-500 font-bold cursor-pointer hover:text-black hover:scale-110 transition-all duration-150 ease-in-out">
             Login
@@ -35,9 +36,12 @@
           </button>
         </div>
       </nav>
+    </header>
 
+    <!--HERO SECTION-->
+    <section class="md:flex flex-row-reverse relative mb-32 md:mb-28">
       <!--HIDDEN MOBILE MENU-->
-      <div class="flex flex-col gap-4 bg-[hsl(257,27%,26%)] p-4 rounded-xl w-[90%] left-0 absolute z-50">
+      <div id="hidden-menu" class="hidden flex-col gap-4 bg-[hsl(257,27%,26%)] p-4 rounded-xl w-[90%] left-[50%] -translate-x-[50%] absolute z-50">
         <ul class="flex flex-col gap-4 text-white font-bold">
           <li class="cursor-pointer hover:underline underline-2 transition-all duration-150 ease-in-out">
             Features
@@ -60,10 +64,7 @@
           </button>
         </div>
       </div>
-    </header>
-
-    <section class="md:flex flex-row-reverse relative mb-32 md:mb-28">
-      <img class="h-88 translate-x-[25%] z-0" src="/images/illustration-working.svg" alt="hero-image">
+      <img class="h-88 md:translate-x-[25%] w-full max-w-[500px] z-0" src="/images/illustration-working.svg" alt="hero-image">
       <div class="flex flex-col gap-8 justify-center max-md:items-center max-md:text-center mt-8">
         <h1 class="md:text-5xl text-4xl font-bold md:font-extrabold">
           More than just shorter links
@@ -81,12 +82,12 @@
 
     <section class="bg-[hsl(257,27%,26%)] bg-[url('/images/bg-shorten-mobile.svg')] md:bg-[url('/images/bg-shorten-desktop.svg')]
                     bg-cover bg-no-repeat bg-center flex-col md:flex-row z-50 absolute -translate-y-[50%] left-1/2 -translate-x-1/2
-                   p-12 w-[90%] rounded-xl flex gap-4 justify-center mx-auto">
-                   <input class="bg-white p-4 w-full rounded-md" type="text" placeholder="Shorten a link here...">
-                   <button class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer max-md:w-full
-                                  hover:bg-[hsl(180,97%,76%)] hover:scale-105 transition-all duration-150 ease-in-out w-[40%]">
-                      Shorten It!
-                   </button>
+                   px-6 py-12 w-[90%] rounded-xl flex gap-4 justify-center mx-auto">
+      <input class="bg-white p-4 w-full rounded-md" type="text" placeholder="Shorten a link here...">
+      <button class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer max-md:w-full
+                    hover:bg-[hsl(180,97%,76%)] hover:scale-105 transition-all duration-150 ease-in-out w-[40%]">
+        Shorten It!
+      </button>
     </section>
 
     <section class="bg-gray-300 md:h-[750px] flex items-center text-center justify-center flex-col gap-16 pl-16 pr-16 pt-8 pb-8 z-1 relative">
@@ -233,5 +234,7 @@
         </a>
       </div>
     </footer>
+
+    <script type="module" src="/script.js"></script>
   </body>
 </html>
