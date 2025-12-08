@@ -1,1 +1,37 @@
 @import "tailwindcss";
+
+.container {
+    display: grid;
+    grid-template-rows: 2fr 1fr 1fr 2fr 2fr;
+    gap: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "grid-one grid-one grid-two grid-three"
+        "grid-four grid-five grid-five grid-three";
+    }
+
+    .clifford-grid-section {
+        grid-area: grid-one;
+    }
+
+    .jonathan-grid-section {
+        grid-area: grid-two;
+    }
+
+    .jeanette-grid-section {
+        grid-area: grid-four;
+    }
+
+    .patrick-grid-section {
+        grid-area: grid-five;
+    }
+
+    .kira-grid-section {
+        grid-area: grid-three;
+    }
+}
