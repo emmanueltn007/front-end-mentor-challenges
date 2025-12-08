@@ -7,9 +7,104 @@
   <link rel="stylesheet" href="/src/styles.css">
   <title>Weather App</title>
 </head>
-<body>
-  <h1 class="text-4xl text-blue-700">
-    Hello My Name Is Emmanuel!
-  </h1>
+<body class="bg-[hsl(248,92%,14%)] p-8">
+  <!--HEADER SECTION-->
+  <header class="flex justify-between">
+    <div>
+      <img src="/assets/images/logo.svg" alt="weather-now-logo">
+    </div>
+    <nav>
+      <span class="flex gap-4 bg-[hsl(243,23%,30%)] text-white pt-2 pb-2 pl-4 pr-4 rounded-md cursor-pointer">
+        Units
+        <img src="/assets/images/icon-dropdown.svg" alt="dropdown-image">
+      </span>
+    </nav>
+  </header>
+
+  <!--WEATHER SEARCH SECTION-->
+  <div class="flex gap-8 flex-col text-center items-center">
+    <h1 class="text-white text-5xl font-bold">
+      How's the weather looking today?
+    </h1>
+    <div class="flex flex-col gap-4 md:flex-row w-full">
+      <input class="bg-white w-full rounded-md p-2" type="text" placeholder="Search for a place...">
+      <button class="bg-[hsl(248,70%,36%)] text-white rounded-md cursor-pointer p-2">
+        Search
+      </button>
+    </div>
+  </div>
+
+  <!--WEATHER FORECAST SECTION-->
+  <div class="flex flex-col md:flex-row">
+    <div>
+      <div class="max-md:bg-[url('/assets/images/bg-today-small.svg')] md:bg-[url('/assets/images/bg-today-large.svg')]
+                  bg-no-repeat bg-center bg-cover flex flex-col md:flex-row items-center text-center">
+        <span>
+          Berlin, Germany
+        </span>
+        <span>
+          Monday, Dec 08, 2025
+        </span>
+        <span class="flex justify-between items-center">
+          <img class="w-40" src="/assets/images/icon-sunny.webp" alt="sunny-weather-image">
+          20℃
+        </span>
+      </div>
+      <div class="flex flex-col md:flex-row">
+        <div>
+          <span>
+            Feels like
+          </span>
+          <span>
+            18℃
+          </span>
+        </div>
+        <div>
+          <span>
+            Humidity
+          </span>
+          <span>
+            46%
+          </span>
+        </div>
+        <div>
+          <span>
+            Wind
+          </span>
+          <span>
+            9 mph
+          </span>
+        </div>
+        <div>
+          <span>
+            Precipitation
+          </span>
+          <span>
+            0 in
+          </span>
+        </div>
+      </div>
+      <div></div>
+    </div>
+    <div>
+      <div class="flex justify-between">
+        <span>
+          Hourly Forecast
+        </span>
+        <div class="flex">
+          Tuesday
+          <img src="/assets/images/icon-dropdown.svg" alt="dropdown-image">
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 </body>
 </html>
