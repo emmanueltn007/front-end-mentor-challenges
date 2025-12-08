@@ -26,8 +26,8 @@
 
       <!--DESKTOP NAV-->
       <nav class="flex">
-        <img id="menu-btn" class="md:hidden cursor-pointer w-6" src="/images/icon-menu.svg" alt="hamburger-icon">
-        <img id="close-menu-btn" class="hidden md:hidden cursor-pointer w-6" src="/images/icon-menu-close.svg" alt="close-menu-icon">
+        <img id="menu-btn" class="md:hidden cursor-pointer w-6 hover:scale-110 transition-all duration-150 ease-in-out" src="/images/icon-menu.svg" alt="hamburger-icon">
+        <img id="close-menu-btn" class="hidden md:hidden cursor-pointer w-6 hover:scale-110 transition-all duration-150 ease-in-out" src="/images/icon-menu-close.svg" alt="close-menu-icon">
         <div class="max-md:hidden flex gap-8">
           <button class="text-gray-500 font-bold cursor-pointer hover:text-black hover:scale-110 transition-all duration-150 ease-in-out">
             Login
@@ -85,13 +85,13 @@
 
     <section class="bg-[hsl(257,27%,26%)] bg-[url('/images/bg-shorten-mobile.svg')] md:bg-[url('/images/bg-shorten-desktop.svg')]
                     bg-cover bg-no-repeat bg-center flex-col md:flex-row z-50 absolute -translate-y-[50%] left-1/2 -translate-x-1/2
-                   px-6 py-12 w-[90%] rounded-xl flex gap-4 justify-center mx-auto">
+                   px-6 py-12 w-[90%] rounded-xl flex gap-8 md:gap-4 justify-center mx-auto">
       <input id="js-input-link" class="bg-white p-4 w-full rounded-md" type="text" placeholder="Shorten a link here...">
       <button id="js-shorten-link-btn" class="text-white bg-[hsl(180,66%,49%)] font-bold pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer max-md:w-full
                     hover:bg-[hsl(180,97%,76%)] hover:scale-105 transition-all duration-150 ease-in-out w-[40%]">
         Shorten It!
       </button>
-      <p id="js-message-alert" class="text-sm text-[hsl(0,87%,67%)] absolute left-6 bottom-[30%] translate-y-full italic"></p>
+      <p id="js-message-alert" class="text-sm text-[hsl(0,87%,67%)] absolute left-6 bottom-[30%] top-[50%] translate-y-0 md:translate-y-full italic"></p>
     </section>
 
     <section class="bg-gray-300 md:h-[750px] flex items-center text-center justify-center flex-col gap-16 pl-16 pr-16 pt-8 pb-8 z-1 relative">

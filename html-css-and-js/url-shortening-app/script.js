@@ -3,6 +3,7 @@ const openMenuBtn = document.querySelector('#menu-btn');
 const closeMenuBtn = document.querySelector('#close-menu-btn');
 const hiddenMenu = document.querySelector('#hidden-menu');
 
+
 openMenuBtn.addEventListener('click', () => {
     hiddenMenu.style.display = 'block';
     openMenuBtn.style.display = 'none';
@@ -43,11 +44,23 @@ shortenLinkBtn.addEventListener('click', () => {
     inputLink.style.borderColor = '';
 });
 
-// FETCHING API SECTION
-const apiUrl = 'https://cleanuri.com/api/v1/shorten';
+// API SECTION
 
-fetch(apiUrl)
-.then(response => response.json())
-.then(data => {
-    console.log(data);
+shortenLinkBtn.addEventListener('click', () => {
+    const apiUrl = 'https://cleanuri.com/api/v1/shorten';
+
+    fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: JSON.stringify({
+            url: inputLink.value
+        })    
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+    })
+    .catch(err => console.error(err));
 })
