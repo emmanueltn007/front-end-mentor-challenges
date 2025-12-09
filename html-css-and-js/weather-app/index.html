@@ -7,17 +7,73 @@
   <link rel="stylesheet" href="/src/styles.css">
   <title>Weather App</title>
 </head>
-<body class="bg-[hsl(248,92%,14%)] p-8">
+<body class="bg-[hsl(248,92%,14%)] p-8 flex flex-col gap-8 relative">
   <!--HEADER SECTION-->
   <header class="flex justify-between">
     <div>
       <img src="/assets/images/logo.svg" alt="weather-now-logo">
     </div>
-    <nav>
-      <span class="flex gap-4 bg-[hsl(243,23%,30%)] text-white pt-2 pb-2 pl-4 pr-4 rounded-md cursor-pointer">
+    <nav id="js-units-dropdown">
+      <span class="flex gap-2 bg-[hsl(243,23%,30%)] text-white p-2 rounded-md cursor-pointer
+                    active:border border-white">
+        <img src="/assets/images/icon-units.svg" alt="units-icon">
         Units
         <img src="/assets/images/icon-dropdown.svg" alt="dropdown-image">
       </span>
+    </nav>
+    <!--DROPDOWN MENU-->
+    <nav id="js-hidden-units-menu" class="hidden bg-[hsl(243,27%,20%)] rounded-md p-4 absolute right-8 translate-y-16">
+      <span class="text-white">
+        Switch to imperial
+      </span>
+      <span class="text-white">
+        Switch to metric
+      </span>
+      <div class="mb-2">
+        <span class="text-[hsl(240,6%,70%)] font-semibold">
+          Temperature
+        </span>
+        <div class="flex flex-col text-white gap-2">
+          <span>
+            Celsius(℃)
+          </span>
+          <span>
+            Fahrenheit(℉)
+          </span>
+        </div>
+      </div>
+
+      <hr class="text-[hsl(240,6%,70%)]">
+
+      <div class="mb-2">
+        <span class="text-[hsl(240,6%,70%)] font-semibold">
+          Wind Speed
+        </span>
+        <div class="flex flex-col text-white gap-2">
+          <span>
+            km/h
+          </span>
+          <span>
+            mph
+          </span>
+        </div>
+      </div>
+
+      <hr class="text-[hsl(240,6%,70%)]">
+
+      <div>
+        <span class="text-[hsl(240,6%,70%)] font-semibold">
+          Precipitation
+        </span>
+        <div class="flex flex-col text-white gap-2">
+          <span>
+            Millimetres(mm)
+          </span>
+          <span>
+            Inches(in)
+          </span>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -26,85 +82,279 @@
     <h1 class="text-white text-5xl font-bold">
       How's the weather looking today?
     </h1>
-    <div class="flex flex-col gap-4 md:flex-row w-full">
-      <input class="bg-white w-full rounded-md p-2" type="text" placeholder="Search for a place...">
-      <button class="bg-[hsl(248,70%,36%)] text-white rounded-md cursor-pointer p-2">
+    <div class="flex flex-col gap-4 justify-center md:flex-row w-full">
+      <input class="bg-white w-full md:w-[45%] rounded-md p-2" type="text" placeholder="Search for a place...">
+      <button class="bg-[hsl(233,67%,56%)] md:w-[15%] text-white rounded-md cursor-pointer p-2">
         Search
       </button>
     </div>
   </div>
 
   <!--WEATHER FORECAST SECTION-->
-  <div class="flex flex-col md:flex-row">
-    <div>
-      <div class="max-md:bg-[url('/assets/images/bg-today-small.svg')] md:bg-[url('/assets/images/bg-today-large.svg')]
-                  bg-no-repeat bg-center bg-cover flex flex-col md:flex-row items-center text-center">
-        <span>
-          Berlin, Germany
-        </span>
-        <span>
-          Monday, Dec 08, 2025
-        </span>
-        <span class="flex justify-between items-center">
-          <img class="w-40" src="/assets/images/icon-sunny.webp" alt="sunny-weather-image">
-          20℃
-        </span>
+  <div class="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-8">
+    <div class="flex flex-col gap-4 md:grid grid-rows-[2fr_0.5fr_1fr]">
+      <div class="p-4 max-md:bg-[url('/assets/images/bg-today-small.svg')] md:bg-[url('/assets/images/bg-today-large.svg')] h-full
+                  bg-no-repeat bg-center bg-cover flex flex-col md:flex-row items-center text-center justify-between rounded-2xl">
+        <div class="flex flex-col text-white">
+          <span class="font-bold text-2xl"> 
+            Berlin, Germany
+          </span>
+          <span class="flex items-center"pan>
+            Monday, Dec 08, 2025
+          </span>
+        </div>
+        <div class="flex justify-between items-center">
+          <div>
+            <img class="w-25" src="/assets/images/icon-sunny.webp" alt="sunny-weather-image">
+          </div>
+          <span class="text-[96px] text-white">
+            20℃
+          </span>
+        </div>
       </div>
-      <div class="flex flex-col md:flex-row">
-        <div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-white h-full">
+        <div class="bg-[hsl(243,23%,30%)] flex flex-col justify-between p-4 rounded-xl">
           <span>
             Feels like
           </span>
-          <span>
+          <span class="text-2xl">
             18℃
           </span>
         </div>
-        <div>
+        <div class="bg-[hsl(243,23%,30%)] flex flex-col justify-between p-4 rounded-xl">
           <span>
             Humidity
           </span>
-          <span>
+          <span class="text-2xl">
             46%
           </span>
         </div>
-        <div>
+        <div class="bg-[hsl(243,23%,30%)] flex flex-col justify-between p-4 rounded-xl">
           <span>
             Wind
           </span>
-          <span>
+          <span class="text-2xl">
             9 mph
           </span>
         </div>
-        <div>
+        <div class="bg-[hsl(243,23%,30%)] flex flex-col justify-between p-4 rounded-xl">
           <span>
             Precipitation
           </span>
-          <span>
+          <span class="text-2xl">
             0 in
           </span>
         </div>
       </div>
-      <div></div>
-    </div>
-    <div>
-      <div class="flex justify-between">
-        <span>
-          Hourly Forecast
+      <div class="text-white flex flex-col gap-2 h-full">
+        <span class="font-bold">
+          Daily Forecast
         </span>
-        <div class="flex">
-          Tuesday
-          <img src="/assets/images/icon-dropdown.svg" alt="dropdown-image">
+        <div class="grid grid-cols-3 md:grid-cols-7 gap-4">
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span class="">
+              Tue
+            </span>
+              <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span class="">
+              Wed
+            </span>
+              <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span class="">
+              Thu
+            </span>
+              <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span class="">
+              Fri
+            </span>
+              <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span class="">
+              Sat
+            </span>
+              <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span class="">
+              Sun
+            </span>
+            <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
+          <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
+            <span>
+              Mon
+            </span>
+              <img class="w-10" src="/assets/images/icon-rain.webp" alt="rain-icon">
+            <div class="flex justify-between text-xs">
+              <span>
+                20℃
+              </span>
+              <span>
+                14℃
+              </span>
+            </div>
+          </div>
         </div>
       </div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
+    </div>
+
+    <!--HOURLY FORECAST SECTION-->
+    <div class="w-full bg-[hsl(243,27%,20%)] flex flex-col gap-4 p-4 rounded-2xl">
+      <div class="flex justify-between">
+        <span class="text-white font-bold">
+          Hourly Forecast
+        </span>
+        <div class="text-white flex gap-2 bg-[hsl(243,23%,30%)] pl-4 pr-4 pt-2 pb-2 rounded-md cursor-pointer">
+          Tuesday
+          <img class="w-3" src="/assets/images/icon-dropdown.svg" alt="dropdown-image">
+        </div>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            3PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            4PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            5PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white ">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            6PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            7PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            8PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            9PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
+      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
+        <div class="flex">
+          <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
+          <span>
+            10PM
+          </span>
+        </div>
+        <span>
+          20℃
+        </span>
+      </div>
     </div>
   </div>
+
+  <script src="/scripts/dropdown.js"></script>
 </body>
 </html>
