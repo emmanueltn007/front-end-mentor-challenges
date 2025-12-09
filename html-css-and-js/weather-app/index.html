@@ -22,7 +22,7 @@
       </span>
     </nav>
     <!--DROPDOWN MENU-->
-    <nav id="js-hidden-units-menu" class="hidden bg-[hsl(243,27%,20%)] rounded-md p-4 absolute right-8 translate-y-16">
+    <nav id="js-hidden-units-menu" class="hidden bg-[hsl(243,27%,20%)] rounded-md p-4 absolute right-8 translate-y-16 z-200">
       <span class="text-white">
         Switch to imperial
       </span>
@@ -82,24 +82,25 @@
     <h1 class="text-white text-5xl font-bold">
       How's the weather looking today?
     </h1>
-    <div class="flex flex-col gap-4 justify-center md:flex-row w-full">
-      <input class="bg-white w-full md:w-[45%] rounded-md p-2" type="text" placeholder="Search for a place...">
-      <button class="bg-[hsl(233,67%,56%)] md:w-[15%] text-white rounded-md cursor-pointer p-2">
+    <div class="flex flex-col gap-4 justify-center md:flex-row w-full relative">
+      <input class="text-white bg-[hsl(243,27%,20%)] w-full md:w-[45%] rounded-md pt-2 pb-2 pr-2 pl-8" type="text" placeholder="Search for a place...">
+      <button class="bg-[hsl(233,67%,56%)] md:w-[15%] text-white rounded-md cursor-pointer p-2 hover:bg-[hsl(248,70%,36%)]
+                      transition-all duration-150 ease-in-out">
         Search
       </button>
     </div>
   </div>
 
   <!--WEATHER FORECAST SECTION-->
-  <div class="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-8">
-    <div class="flex flex-col gap-4 md:grid grid-rows-[2fr_0.5fr_1fr]">
+  <div class="flex flex-col md:grid md:grid-cols-[2fr_1fr] gap-8 z-100">
+    <div class="flex flex-col gap-4 md:grid md:grid-rows-[2fr_0.5fr_1fr] h-full">
       <div class="p-4 max-md:bg-[url('/assets/images/bg-today-small.svg')] md:bg-[url('/assets/images/bg-today-large.svg')] h-full
                   bg-no-repeat bg-center bg-cover flex flex-col md:flex-row items-center text-center justify-between rounded-2xl">
         <div class="flex flex-col text-white">
           <span class="font-bold text-2xl"> 
             Berlin, Germany
           </span>
-          <span class="flex items-center"pan>
+          <span class="flex items-center">
             Monday, Dec 08, 2025
           </span>
         </div>
@@ -150,7 +151,7 @@
         <span class="font-bold">
           Daily Forecast
         </span>
-        <div class="grid grid-cols-3 md:grid-cols-7 gap-4">
+        <div class="grid grid-cols-3 md:grid-rows-[100%] md:grid-cols-7 gap-2">
           <div class="bg-[hsl(243,23%,30%)] p-2 rounded-xl">
             <span class="">
               Tue
@@ -254,101 +255,126 @@
     </div>
 
     <!--HOURLY FORECAST SECTION-->
-    <div class="w-full bg-[hsl(243,27%,20%)] flex flex-col gap-4 p-4 rounded-2xl">
+    <div class="w-full bg-[hsl(243,27%,20%)] flex flex-col max-md:gap-4 md:justify-between p-4 rounded-2xl h-full">
       <div class="flex justify-between">
         <span class="text-white font-bold">
           Hourly Forecast
         </span>
-        <div class="text-white flex gap-2 bg-[hsl(243,23%,30%)] pl-4 pr-4 pt-2 pb-2 rounded-md cursor-pointer">
+        <div id="js-day-selection-dropdown-menu" class="text-white flex items-center gap-2 bg-[hsl(243,23%,30%)] pl-4 pr-4 pt-2 pb-2 rounded-md cursor-pointer relative">
           Tuesday
           <img class="w-3" src="/assets/images/icon-dropdown.svg" alt="dropdown-image">
         </div>
+        <div id="js-hidden-day-selection-dropdown-menu" class="hidden bg-[hsl(243,27%,20%)] rounded-md p-4 absolute right-12 translate-y-12 z-200 text-white gap-2 w-[150px]">
+          <div class="flex flex-col gap-4">
+            <span>
+              Monday
+            </span>
+            <span>
+              Tuesday
+            </span>
+            <span>
+              Wednesday
+            </span>
+            <span>
+              Thursday
+            </span>
+            <span>
+              Friday
+            </span>
+            <span>
+              Saturday
+            </span>
+            <span>
+              Sunday
+            </span>
+          </div>
+        </div>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             3PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             4PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             5PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white ">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white ">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             6PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             7PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             8PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             9PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
-      <div class="flex justify-between bg-[hsl(243,23%,30%)] p-2 rounded-md text-white">
-        <div class="flex">
+      <div class="flex justify-between items-center bg-[hsl(243,23%,30%)] p-1 rounded-md text-white">
+        <div class="flex items-center">
           <img class="w-8" src="/assets/images/icon-overcast.webp" alt="overcast-icon">
-          <span>
+          <span class="text-sm">
             10PM
           </span>
         </div>
-        <span>
+        <span class="text-[12px]">
           20℃
         </span>
       </div>
@@ -356,5 +382,6 @@
   </div>
 
   <script src="/scripts/dropdown.js"></script>
+  <script src="/scripts/apiWeatherFetch.js"></script>
 </body>
 </html>
