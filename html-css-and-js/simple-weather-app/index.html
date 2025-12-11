@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Weather App</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="js-current-time"></h1>
+        <p class="todays-date js-todays-date"></p>
+        <h3 class="location js-location">
+           Your Location Will Show Here...
+        </h3>
+        <h2 class="weather-status js-weather-status"></h2>
+        <div class="weather-image-container js-weather-image"></div>
+        <div class="input-and-button-container">
+            <input class="js-location-input" type="text" placeholder="Enter your location">
+            <button class="js-search-btn">
+                Get Weather
+            </button>
+        </div>
+        <div class="3-days-weather-forecast">
+            <div class="tommorow"></div>
+            <div class="day-after-tommorow"></div>
+            <div class="day-after-the-day-after-tommorow"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
