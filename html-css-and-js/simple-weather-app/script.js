@@ -27,17 +27,40 @@ currentTimeDisplay.textContent = `${currentTime}`
 todaysDate.textContent = `${currentDate}`;
 
 // FETCHING API SECTION
+const dateDisplayForecast = document.querySelectorAll('.js-date-forecast');
+const weatherStatusForecast = document.querySelectorAll('.js-weather-status-forecast');
+const weatherImageForecast = document.querySelectorAll('.js-weather-image-forecast');
+const minTempForecast = document.querySelectorAll('.js-min-temp-forecast');
+const maxTempForecast = document.querySelectorAll('.js-max-temp-forecast');
+
 searchButton.addEventListener('click', () => {
     let userLocationInput = locationInput.value;
 
     const APIkey = '6e06bb76f7254766b48140714252611';
-    const apiUrl = `https://api.weatherapi.com/v1/current.json?key=${APIkey}&q=${userLocationInput}`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json?key=${APIkey}&q=${userLocationInput}&days=3`;
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
             console.log(data);
+
+            // CURRENT WEATHER
             locationDisplay.textContent = `${data.location.region}, ${data.location.name}`;
             weatherStatus.textContent = `${data.current.condition.text}`;
-            weatherImageDisplay.innerHTML = `<img style="width: 100px" src="https:${data.current.condition.icon}" alt="weather-icon">`;
+            weatherImageDisplay.innerHTML = `<img style="width: 80px" src="https:${data.current.condition.icon}" alt="weather-icon">`;
+
+            // 3-DAYS WEATHER fORECAST
+            const threeDaysWeatherForecast = data.forecast.forecastday;
+
+            threeDaysWeatherForecast.forEach((dayForecast, index) => {
+                dateDisplayForecast[index].textContent = dayForecast.date;
+                weatherStatusForecast[index].innerHTML = `<img style="width: 30px" src="https:${dayForecast.day.condition.icon}" alt="weather-icon">`;
+                maxTempForecast[index].textContent = dayForecast.day.maxtemp_c;
+                minTempForecast[index].textContent = dayForecast.day.mintemp_c;
+                /*
+                console.log(dayForecast.date);
+                console.log(dayForecast.day.maxtemp_c);
+                console.log(dayForecast.day.mintemp_c);
+                */
+            })
         });
 });

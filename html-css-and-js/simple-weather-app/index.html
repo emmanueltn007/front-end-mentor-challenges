@@ -8,23 +8,58 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="js-current-time"></h1>
-        <p class="todays-date js-todays-date"></p>
         <h3 class="location js-location">
-           Your Location Will Show Here...
+            Your Location Will Show Here...
         </h3>
-        <h2 class="weather-status js-weather-status"></h2>
-        <div class="weather-image-container js-weather-image"></div>
+        <p class="todays-date js-todays-date"></p>
+        <p class="js-current-time"></p>
+        <div class="three-days-weather-forecast">
+            <div class="todays-weather-forecast">
+                <h2 class="weather-status js-weather-status"></h2>
+                <div class="weather-image-container js-weather-image"></div>
+                <div class="temp-forecast">
+                    <div>
+                        <p>
+                            Max Temp:
+                            <span class="js-min-temp-forecast"></span>
+                        </p>
+                        <span class="js-max-temp-today"></span>
+                    </div>
+                    <div>
+                        <p>
+                            Min Temp:
+                            <span class="js-min-temp-forecast"></span>
+                        </p>
+                        <span class="js-min-temp-today"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="two-days-weather-forecast">
+                <div class="tommorow">
+                    <div class="js-date-forecast"></div>
+                    <div class="js-weather-status-forecast"></div>
+                    <div class="js-weather-image-forecast"></div>
+                    <div>
+                        <div class="js-min-temp-forecast"></div>
+                        <div class="js-max-temp-forecast"></div>
+                    </div>
+                </div>
+                <div class="day-after-tommorow">
+                    <div class="js-date-forecast"></div>
+                    <div class="js-weather-status-forecast"></div>
+                    <div class="js-weather-image-forecast"></div>
+                    <div class="temp-container">
+                        <div class="js-min-temp-forecast"></div>
+                        <div class="js-max-temp-forecast"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="input-and-button-container">
             <input class="js-location-input" type="text" placeholder="Enter your location">
             <button class="js-search-btn">
                 Get Weather
             </button>
-        </div>
-        <div class="3-days-weather-forecast">
-            <div class="tommorow"></div>
-            <div class="day-after-tommorow"></div>
-            <div class="day-after-the-day-after-tommorow"></div>
         </div>
     </div>
     <script src="script.js"></script>
