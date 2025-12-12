@@ -132,3 +132,29 @@ button {
 button:hover {
     background-color: rgb(255, 176, 119);
 }
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        height: 100%;
+    }
+
+    .three-days-weather-forecast {
+        grid-template-rows: 2fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .two-days-weather-forecast {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .input-and-button-container {
+        flex-direction: row;
+    }
+
+    .input-and-button-container p {
+        bottom: 0;
+        transform: translateY(100%);
+    }
+}
