@@ -15,37 +15,32 @@
         <p class="js-current-time"></p>
         <div class="three-days-weather-forecast">
             <div class="todays-weather-forecast">
-                <h2 class="weather-status js-weather-status"></h2>
-                <div class="weather-image-container js-weather-image"></div>
+                <p class="weather-status js-weather-status"></p>
+                <div class="weather-image-container js-todays-weather-image"></div>
                 <div class="temp-forecast">
-                    <div>
-                        <p>
-                            Max Temp:
-                            <span class="js-min-temp-forecast"></span>
-                        </p>
-                        <span class="js-max-temp-today"></span>
-                    </div>
-                    <div>
-                        <p>
-                            Min Temp:
-                            <span class="js-min-temp-forecast"></span>
-                        </p>
-                        <span class="js-min-temp-today"></span>
-                    </div>
+                    <h3 class="js-current-temp"></h3>
+                </div>
+                <div class="temp-container">
+                    <div class="js-min-temp-forecast"></div>
+                    <div class="js-max-temp-forecast"></div>
                 </div>
             </div>
             <div class="two-days-weather-forecast">
                 <div class="tommorow">
-                    <div class="js-date-forecast"></div>
+                    <div>
+                        <span>
+                            Tommorow
+                        </span>
+                    </div>
                     <div class="js-weather-status-forecast"></div>
                     <div class="js-weather-image-forecast"></div>
-                    <div>
+                    <div class="temp-container">
                         <div class="js-min-temp-forecast"></div>
                         <div class="js-max-temp-forecast"></div>
                     </div>
                 </div>
                 <div class="day-after-tommorow">
-                    <div class="js-date-forecast"></div>
+                    <div class="js-day-after-tommorow-date"></div>
                     <div class="js-weather-status-forecast"></div>
                     <div class="js-weather-image-forecast"></div>
                     <div class="temp-container">
@@ -57,6 +52,7 @@
         </div>
         <div class="input-and-button-container">
             <input class="js-location-input" type="text" placeholder="Enter your location">
+            <p class="js-message-alert"></p>
             <button class="js-search-btn">
                 Get Weather
             </button>
