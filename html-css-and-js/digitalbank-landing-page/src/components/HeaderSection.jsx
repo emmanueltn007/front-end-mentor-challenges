@@ -9,7 +9,7 @@ function HeaderSection() {
 
   return (
     <>
-      <header className="flex justify-between md:justify-around items-center relative p-4">
+      <header className="bg-white flex justify-between md:justify-around items-center relative max-md:p-4">
         <div>
           <img src="/images/logo-dark.svg" alt="logo-image" />
         </div>

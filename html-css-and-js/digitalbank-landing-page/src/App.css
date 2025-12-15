@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
-* {
+p {
+    font-weight: 600;
     font-size: 18px;
+    color: hsl(233, 8%, 62%);
 }
