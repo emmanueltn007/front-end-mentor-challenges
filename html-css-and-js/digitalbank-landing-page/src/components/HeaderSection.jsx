@@ -24,7 +24,7 @@ function HeaderSection() {
 
           <div
             className={`${isOpen ? "hidden" : "block"} absolute text-[hsl(233,8%,62%)] font-semibold flex flex-col gap-4 items-center bg-white left-[50%] -translate-x-[50%]
-                        translate-y-16 p-4 border border-red-600 w-[90%] rounded-md md:hidden`}
+                        translate-y-16 p-4 w-[90%] rounded-md md:hidden`}
           >
             <span>Home</span>
             <span>About</span>
