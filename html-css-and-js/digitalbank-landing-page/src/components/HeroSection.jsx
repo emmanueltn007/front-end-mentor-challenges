@@ -1,6 +1,6 @@
 function HeroSection() {
   return (
-    <section className="bg-[hsl(0,0%,98%)] flex flex-col max-md:h-[60%] md:flex-row-reverse pl-4 pr-4 md:pl-16 md:pr-16">
+    <section className="bg-[hsl(0,0%,98%)] flex flex-col max-md:h-[60%] md:flex-row-reverse md:pl-16 md:pr-16">
       <div
         className="flex justify-center max-md:bg-[url('/images/bg-intro-mobile.svg')] md:bg-[url('/images/bg-intro-desktop.svg')]
             bg-no-repeat md:bg-right bg-cover md:bg-contain"
