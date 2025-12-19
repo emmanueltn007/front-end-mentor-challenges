@@ -12,7 +12,11 @@ function OffersSection() {
       <div className="max-md:text-center flex flex-col gap-4 md:flex-row">
         <div className="flex justify-between flex-col max-md:items-center">
           <div className="mb-4 flex flex-col max-md:items-center">
-            <img className="w-20 mb-4" src="/images/icon-online.svg" alt="online-banking-icon" />
+            <img
+              className="w-20 mb-4"
+              src="/images/icon-online.svg"
+              alt="online-banking-icon"
+            />
             <h4 className="text-2xl">Online Banking</h4>
           </div>
           <p className="text-[hsl(233,8%,62%)] font-semibold">
@@ -22,7 +26,11 @@ function OffersSection() {
         </div>
         <div className="flex justify-between flex-col max-md:items-center">
           <div className="mb-4 flex flex-col max-md:items-center">
-            <img className="w-20 mb-4" src="/images/icon-budgeting.svg" alt="simple-budgeting-icon" />
+            <img
+              className="w-20 mb-4"
+              src="/images/icon-budgeting.svg"
+              alt="simple-budgeting-icon"
+            />
             <h4 className="text-2xl">Simple Budgeting</h4>
           </div>
           <p className="text-[hsl(233,8%,62%)] font-semibold">
@@ -32,7 +40,11 @@ function OffersSection() {
         </div>
         <div className="flex justify-between flex-col max-md:items-center">
           <div className="mb-4 flex flex-col max-md:items-center">
-            <img className="w-20 mb-4" src="/images/icon-onboarding.svg" alt="fast-onboarding-icon" />
+            <img
+              className="w-20 mb-4"
+              src="/images/icon-onboarding.svg"
+              alt="fast-onboarding-icon"
+            />
             <h4 className="text-2xl">Fast Onboarding</h4>
           </div>
           <p className="text-[hsl(233,8%,62%)] font-semibold">
@@ -42,7 +54,11 @@ function OffersSection() {
         </div>
         <div className="flex justify-between flex-col max-md:items-center">
           <div className="mb-4 flex flex-col max-md:items-center">
-            <img className="w-20 mb-4" src="/images/icon-api.svg" alt="open-api-icon" />
+            <img
+              className="w-20 mb-4"
+              src="/images/icon-api.svg"
+              alt="open-api-icon"
+            />
             <h4 className="text-2xl">Open API</h4>
           </div>
           <p className="text-[hsl(233,8%,62%)] font-semibold">

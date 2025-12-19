@@ -7,6 +7,8 @@ function HeaderSection() {
     setIsOpen((prev) => !prev);
   }
 
+  const navItems = ["Home", "About", "Contact", "Blog", "Careers"];
+
   return (
     <>
       <header className="bg-white flex justify-between items-center relative p-4 md:pl-16 md:pr-16">
@@ -15,46 +17,19 @@ function HeaderSection() {
         </div>
         <nav>
           <ul className="max-md:hidden flex items-center leading-none gap-4 font-semibold text-[hsl(233,8%,62%)]">
-            <li className="cursor-pointer relative">
-              <span
-                className="after:content-[''] after:absolute after:left-0 after:-bottom-2
+            {navItems.map((navItem) => {
+              return (
+                <li key={navItem} className="cursor-pointer relative">
+                  <span
+                    className="after:content-[''] after:absolute after:left-0 after:-bottom-2
                         after:h-0.5 after:w-0 after:bg-[linear-gradient(45deg,hsl(192,69%,51%),hsl(136,64%,51%))]
                         hover:after:w-full after:transition-all after:duration-150 after:ease-in-out"
-              >
-                Home
-              </span>
-            </li>
-            <li
-              className="cursor-pointer relative"
-            >
-              <span className="after:content-[''] after:absolute after:left-0 after:-bottom-2
-                        after:h-0.5 after:w-0 after:bg-[linear-gradient(45deg,hsl(192,69%,51%),hsl(136,64%,51%))]
-                        hover:after:w-full after:transition-all after:duration-150 after:ease-in-out">About</span>
-            </li>
-            <li
-              className="cursor-pointer relative"
-            >
-              <span className="after:content-[''] after:absolute after:left-0 after:-bottom-2
-                        after:h-0.5 after:w-0 after:bg-[linear-gradient(45deg,hsl(192,69%,51%),hsl(136,64%,51%))]
-                        hover:after:w-full after:transition-all after:duration-150 after:ease-in-out">
-                Contact
-              </span>
-              
-            </li>
-            <li
-              className="cursor-pointer relative"
-            >
-              <span className="after:content-[''] after:absolute after:left-0 after:-bottom-2
-                        after:h-0.5 after:w-0 after:bg-[linear-gradient(45deg,hsl(192,69%,51%),hsl(136,64%,51%))]
-                        hover:after:w-full after:transition-all after:duration-150 after:ease-in-out">Blog</span>
-            </li>
-            <li
-              className="cursor-pointer relative"
-            >
-              <span className="after:content-[''] after:absolute after:left-0 after:-bottom-2
-                        after:h-0.5 after:w-0 after:bg-[linear-gradient(45deg,hsl(192,69%,51%),hsl(136,64%,51%))]
-                        hover:after:w-full after:transition-all after:duration-150 after:ease-in-out">Careers</span>
-            </li>
+                  >
+                    {navItem}
+                  </span>
+                </li>
+              );
+            })}
           </ul>
 
           <div
@@ -63,11 +38,13 @@ function HeaderSection() {
             } absolute text-[hsl(233,8%,62%)] font-semibold flex flex-col gap-4 items-center bg-white left-[50%] -translate-x-[50%]
                         translate-y-16 p-4 w-[90%] rounded-md md:hidden`}
           >
-            <span className="cursor-pointer">Home</span>
-            <span className="cursor-pointer">About</span>
-            <span className="cursor-pointer">Contact</span>
-            <span className="cursor-pointer">Blog</span>
-            <span className="cursor-pointer">Careers</span>
+            {
+              navItems.map((hiddenNavItem) => {
+                return (
+                  <span key={hiddenNavItem} className="cursor-pointer">{hiddenNavItem}</span>
+                );
+              })
+            }
           </div>
         </nav>
         <div>
@@ -96,4 +73,4 @@ function HeaderSection() {
   );
 }
 
-export default HeaderSection;
+export default HeaderSection
