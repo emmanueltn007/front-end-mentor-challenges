@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import HeaderSection from "./components/HeaderSection";
 
-function App () {
+function App() {
   return (
-    <div>App</div>
+    <>
+      <HeaderSection />
+    </>
   );
 }
 
-export default App
+export default App;
