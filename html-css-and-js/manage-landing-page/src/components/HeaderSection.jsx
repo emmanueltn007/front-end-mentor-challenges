@@ -44,7 +44,7 @@ function HeaderSection() {
         </ul>
       </nav>
       <div className="flex justify-center">
-        <button onClick={menuToggle} className="md:hidden">
+        <button onClick={menuToggle} className="md:hidden cursor-pointer">
           <img
             src={isOpen ? "/images/icon-close.svg" : "/images/icon-hamburger.svg"}
             alt="menu-icon"

@@ -1,6 +1,6 @@
 function FeaturesSection() {
   return (
-    <section className="grid grid-rows-[1fr_1fr] md:grid-rows-[1fr] md:grid-cols-[1fr_1fr] pl-8 pr-8 md:pl-16 md:pr-16">
+    <section className="grid grid-rows-[0.5fr_1fr] md:grid-rows-[1fr] md:grid-cols-[1fr_1fr] pl-8 pr-8 md:pl-16 md:pr-16">
       <div>
         <h3 className="text-3xl text-[hsl(228,39%,23%)] font-bold">
           What's different about Manage?
