@@ -10,7 +10,7 @@ function DownloadingSection () {
                     Please do let us know if you've got a favourite you'd like us to prioritize.
                 </p>
             </div>
-            <div className="w-full flex flex-col md:flex-row gap-8">
+            <div className="w-full flex flex-col md:items-center md:flex-row gap-8 md:relative">
                 <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4">
                     <div className="flex flex-col items-center gap-4 pt-8">
                         <img 
@@ -32,7 +32,8 @@ function DownloadingSection () {
                         </button>
                     </div>
                 </div>
-                <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4">
+                <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4 md:absolute
+                                left-[50%] -translate-x-[50%] translate-y-8">
                     <div className="flex flex-col items-center gap-4 pt-8">
                         <img 
                             className="w-20"
@@ -53,7 +54,8 @@ function DownloadingSection () {
                         </button>
                     </div>
                 </div>
-                <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4">
+                <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4 md:absolute right-0
+                                translate-y-16">
                     <div className="flex flex-col items-center gap-4 pt-8">
                         <img 
                             className="w-20"
