@@ -11,7 +11,7 @@ function DownloadingSection () {
                 </p>
             </div>
             <div className="w-full flex flex-col md:items-center md:flex-row gap-8 md:relative">
-                <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4">
+                <div className="shadow-md shadow-gray-500 flex flex-col gap-8 items-center rounded-md p-4 md:mb-24">
                     <div className="flex flex-col items-center gap-4 pt-8">
                         <img 
                             className="w-20"
