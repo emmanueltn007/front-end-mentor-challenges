@@ -5,6 +5,7 @@ import FeaturesSection from "./components/FeaturesSection";
 import DownloadingSection from "./components/DownloadingSection";
 import FAQSection from "./components/FAQSection";
 import SignupSection from "./components/SignupSection";
+import FooterSection from "./components/FooterSection";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <DownloadingSection />
       <FAQSection />
       <SignupSection />
+      <FooterSection />
     </>
   );
 }
