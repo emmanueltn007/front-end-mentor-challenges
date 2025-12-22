@@ -1,7 +1,7 @@
 function FAQSection () {
     return (
-        <section className="flex flex-col items-center justify-center">
-            <div className="text-center">
+        <section className="md:pl-64 md:pr-64 pt-8 pb-8 pl-8 pr-8 flex flex-col gap-4">
+            <div className="flex flex-col gap-4 text-center">
                <h2 className="text-2xl text-[hsl(229,31%,21%)] font-semibold">
                     Frequently Asked Questions
                 </h2>
@@ -10,7 +10,7 @@ function FAQSection () {
                     If you have any other questions you'd like answered please feel free to email us.
                 </p> 
             </div>
-            <div className="text-[hsl(229,31%,21%)] font-semibold">
+            <div className="text-[hsl(229,31%,21%)] font-semibold w-full">
                 
                 <div className="flex justify-between pt-4 pb-4 border-b border-t border-gray-500">
                     <span>
