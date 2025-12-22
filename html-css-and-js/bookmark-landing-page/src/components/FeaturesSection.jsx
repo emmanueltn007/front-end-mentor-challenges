@@ -37,12 +37,12 @@ function FeaturesSection() {
       </div>
       <div className="flex flex-col gap-8">
         <div
-          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 md:pb-8 md:border-b
+          className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 md:pb-1 md:border-b
                          md:border-gray-500"
         >
          {tabs.map((tab, index) => (
             <button 
-              className={`relative pb-3 font-medium transition-colors cursor-pointer ${currentItem === index ? "text-[hsl(0,94%,66%)] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after-w-full after-bg-red-500" : "text-gray-500 hover:text-[hsl(229,31%,21%)]"}`}
+              className={`relative pb-3 font-medium transition-colors cursor-pointer ${currentItem === index ? "text-[hsl(0,94%,66%)] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-0.75 after:w-full after:bg-red-500" : "text-gray-500 hover:text-[hsl(229,31%,21%)]"}`}
               key={tab} 
               onClick={() => setCurrentItem(index)}
             >

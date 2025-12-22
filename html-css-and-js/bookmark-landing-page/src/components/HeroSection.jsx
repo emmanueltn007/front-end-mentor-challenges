@@ -14,11 +14,11 @@ function HeroSection () {
                     Try it for free.
                 </p>
                 <div className="flex gap-4 font-bold">
-                    <button className="bg-[hsl(231,69%,60%)] text-white pt-2 pb-2 pl-6 pr-6 rounded-md hover:text-[hsl(231,69%,60%)]
-                                         hover:border hover:bg-white hover:border-[hsl(231,69%,60%)] transition-all duration-150 ease-in-out cursor-pointer">
+                    <button className="bg-[hsl(231,69%,60%)] text-white pt-2 pb-2 pl-6 pr-6 rounded-md hover:text-[hsl(231,69%,60%)] shadow-md shadow-gray-400
+                                         border-2 border-transparent hover:bg-white hover:border-[hsl(231,69%,60%)] transition-all duration-150 ease-in-out cursor-pointer">
                         Get it on Chrome
                     </button>
-                    <button className="bg-[hsl(0,0%,97%)] text-gray-500 pt-2 pb-2 pl-6 pr-6 rounded-md hover:border hover:border-gray-400
+                    <button className="bg-[hsl(0,0%,97%)] text-gray-500 pt-2 pb-2 pl-6 pr-6 rounded-md border-2 border-transparent hover:border-gray-400
                                         hover:bg-white shadow-md shadow-gray-400 transition-all duration-150 ease-in-out cursor-pointer">
                         Get it on Firefox
                     </button>

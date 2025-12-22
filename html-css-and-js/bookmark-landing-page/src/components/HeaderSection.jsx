@@ -58,7 +58,7 @@ function HeaderSection () {
                     <img src={isMenuOpen ? "/images/icon-close.svg" : "/images/icon-hamburger.svg"} alt="menu-icon" />
                 </button>
                 <button className='max-md:hidden font-semibold bg-[hsl(0,94%,66%)] text-white pt-2 pb-2 pl-6 pr-6 rounded-md cursor-pointer
-                                    hover:bg-white hover:border hover:border-[hsl(0,94%,66%)] hover:text-[hsl(0,94%,66%)]
+                                    hover:bg-white border-2 border-transparent hover:border-[hsl(0,94%,66%)] hover:text-[hsl(0,94%,66%)]
                                     transition-all duration-150 ease-in-out shadow-md shadow-[hsl(0,0%,55%)]'>
                     LOGIN
                 </button>
