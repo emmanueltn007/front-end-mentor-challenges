@@ -27,7 +27,9 @@ function DownloadingSection () {
                     </div>
                     <img src="/images/bg-dots.svg" alt="dots-image" />
                     <div className="pl-4 pr-4 w-full">
-                         <button className="bg-[hsl(231,69%,60%)] text-white font-semibold pt-4 pb-4 w-full rounded-md">
+                         <button 
+                         className="bg-[hsl(231,69%,60%)] text-white font-semibold pt-4 pb-4 w-full rounded-md cursor-pointer
+                                    border-2 border-transparent hover:border-[hsl(231,69%,60%)] hover:text-[hsl(231,69%,60%)] hover:bg-white transition-all duration-150 ease-in-out">
                             Add & Install Extension
                         </button>
                     </div>
@@ -49,7 +51,8 @@ function DownloadingSection () {
                     </div>
                     <img src="/images/bg-dots.svg" alt="dots-image" />
                     <div className="pl-4 pr-4 w-full">
-                         <button className="bg-[hsl(231,69%,60%)] text-white font-semibold pt-4 pb-4 w-full rounded-md">
+                         <button className="bg-[hsl(231,69%,60%)] text-white font-semibold pt-4 pb-4 w-full rounded-md cursor-pointer
+                                            border-2 border-transparent hover:border-[hsl(231,69%,60%)] hover:text-[hsl(231,69%,60%)] hover:bg-white transition-all duration-150 ease-in-out">
                             Add & Install Extension
                         </button>
                     </div>
@@ -71,7 +74,8 @@ function DownloadingSection () {
                     </div>
                     <img src="/images/bg-dots.svg" alt="dots-image" />
                     <div className="pl-4 pr-4 w-full">
-                         <button className="bg-[hsl(231,69%,60%)] text-white font-semibold pt-4 pb-4 w-full rounded-md">
+                         <button className="bg-[hsl(231,69%,60%)] text-white font-semibold pt-4 pb-4 w-full rounded-md cursor-pointer
+                                            border-2 border-transparent hover:border-[hsl(231,69%,60%)] hover:text-[hsl(231,69%,60%)] hover:bg-white transition-all duration-150 ease-in-out">
                             Add & Install Extension
                         </button>
                     </div>
