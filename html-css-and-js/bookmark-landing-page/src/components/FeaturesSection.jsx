@@ -13,12 +13,12 @@ function FeaturesSection() {
     },
     {
       heading: "Intelligent search",
-      paragraph: "Our powerful search feature will help you find saved sites in no time at all. No need tp trawl through all of your bookmarks.",
+      paragraph: "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
       image: "/images/illustration-features-tab-2.svg",
     },
     {
       heading: "Share your bookmarks",
-      paragraph: "Easily share your bookmarks and collections with others.Create a shareable link that you can send at the click of a button.",
+      paragraph: "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
       image: "/images/illustration-features-tab-3.svg",
     },
   ];
@@ -41,9 +41,13 @@ function FeaturesSection() {
                          md:border-gray-500"
         >
          {tabs.map((tab, index) => (
-            <span key={tab} onClick={() => setCurrentItem(index)}>
+            <button 
+              className={`relative pb-3 font-medium transition-colors cursor-pointer ${currentItem === index ? "text-[hsl(0,94%,66%)] after:absolute after:left-0 after:-bottom-1 after:h-[3px] after-w-full after-bg-red-500" : "text-gray-500 hover:text-[hsl(229,31%,21%)]"}`}
+              key={tab} 
+              onClick={() => setCurrentItem(index)}
+            >
                 {tab}
-            </span>
+            </button>
          ))}
         </div>
         <div className="grid grid-rows-[1fr_1fr] md:grid-rows-1 md:grid-cols-[1fr_1fr]">
