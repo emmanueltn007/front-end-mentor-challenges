@@ -4,6 +4,7 @@ import HeroSection from "./components/HeroSection";
 import FeaturesSection from "./components/FeaturesSection";
 import DownloadingSection from "./components/DownloadingSection";
 import FAQSection from "./components/FAQSection";
+import SignupSection from "./components/SignupSection";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <FeaturesSection />
       <DownloadingSection />
       <FAQSection />
+      <SignupSection />
     </>
   );
 }
