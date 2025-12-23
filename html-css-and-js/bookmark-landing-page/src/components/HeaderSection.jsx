@@ -20,7 +20,7 @@ function HeaderSection() {
         <div
           className={`${
             isMenuOpen ? "block" : "hidden"
-          } insert-0  flex flex-col gap-6 md:hidden absolute left-0 right-0 h-screen top-0 bg-[hsl(229,31%,21%)]/95 pt-8 pb-8 pl-8 pr-8`}
+          } insert-0 pointer-events-auto flex flex-col gap-6 md:hidden absolute left-0 right-0 h-screen top-0 bg-[hsl(229,31%,21%)]/95 pt-8 pb-8 pl-8 pr-8`}
         >
           <div className="border-b border-white pb-8">
             <svg
