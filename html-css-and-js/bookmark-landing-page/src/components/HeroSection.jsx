@@ -4,7 +4,7 @@ function HeroSection () {
             <div>
                 <img src="/images/illustration-hero.svg" alt="illustration-hero-image" />
             </div>
-            <div className="flex flex-col gap-8 md:justify-center max-sm:items-center">
+            <div className="flex flex-col max-md:text-center gap-8 md:justify-center max-sm:items-center">
                 <h1 className="text-3xl text-[hsl(229,31%,21%)] font-semibold">
                     A Simple Bookmark Manager
                 </h1>
