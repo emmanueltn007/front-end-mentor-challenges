@@ -1,4 +1,4 @@
-import faqs from "../../FAQ data/faqs";
+import faqs from "../../data/faqs";
 import FAQItem from "./FAQItem";
 
 function FAQSection() {
