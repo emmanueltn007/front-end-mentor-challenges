@@ -1,11 +1,20 @@
 function MainSection () {
     return (
-        <main className="grid grid-rows-[1fr_1fr]">
-            <div>
-                <img src="/images/image-hero-mobile.png" alt="hero mobile mobile" />
+        <main className="flex flex-col md:flex-row">
+            <div className="md:col-start-2 md:pl-12 md:pr-12">
+                <img 
+                    className="md:hidden"
+                    src="/images/image-hero-mobile.png" 
+                    alt="hero mobile" 
+                />
+                <img 
+                    className="max-md:hidden w-300"
+                    src="/images/image-hero-desktop.png" 
+                    alt="hero desktop"
+                />
             </div>
-            <div className="max-md:text-center max-md:gap-8 flex flex-col items-center max-md:items-center p-8">
-                <h1 className="text-3xl text-[hsl(0,0%,8%)] font-bold">
+            <div className="max-md:text-center max-md:gap-8 flex flex-col md:justify-between md:h-100 max-md:items-center pl-8 pr-8 pb-8 pt-8 md:pl-12 md:pr-12 md:row-start-1">
+                <h1 className="text-3xl md:text-6xl text-[hsl(0,0%,8%)] font-bold">
                     Make remote work
                 </h1>
                 <p className="font-semibold text-[hsl(0,0%,41%)]">
@@ -18,19 +27,19 @@ function MainSection () {
                 >
                     Learn more
                 </button>
-                <div className="flex justify-between">
+                <div className="flex gap-4">
                     <img 
-                        className="h-4 w-auto"
+                        className="h-3 w-auto"
                         src="/images/client-databiz.svg" 
                         alt="databiz logo" 
                     />
                     <img 
-                        className="h-8 w-auto"
+                        className="h-6 w-auto"
                         src="/images/client-audiophile.svg" 
                         alt="audiophile logo" 
                     />
                     <img 
-                        className="h-6 w-auto"
+                        className="h-4 w-auto"
                         src="/images/client-meet.svg" 
                         alt="meet logo" 
                     />
