@@ -13,28 +13,18 @@ function HeaderSection() {
   const [isMobileCompanyDropdownOpen, setIsMobileCompanyDropdownOpen] =
     useState(false);
 
-  function handleToggleMenu() {
-    setIsOpen((prev) => !prev);
-  }
+  const handleToggleMenu = () => setIsOpen((prev) => !prev);
 
-  function handleMobileFeaturesDropdown() {
-    setIsMobileFeaturesDropdownOpen((prev) => !prev);
-  }
+  const handleMobileFeaturesDropdown = () => setIsMobileFeaturesDropdownOpen((prev) => !prev);
 
-  function handleMobileCompanyDropdown() {
-    setIsMobileCompanyDropdownOpen((prev) => !prev);
-  }
+  const handleMobileCompanyDropdown = () => setIsMobileCompanyDropdownOpen((prev) => !prev);
 
   {
     /* DESKTOP FUNCTIONS */
   }
-  function handleFeaturesDropdown() {
-    setIsFeaturesDropdownOpen((prev) => !prev);
-  }
+  const handleFeaturesDropdown = () => setIsFeaturesDropdownOpen((prev) => !prev);
 
-  function handleCompanyDropdown() {
-    setIsCompanyDropdownOpen((prev) => !prev);
-  }
+  const handleCompanyDropdown = () => setIsCompanyDropdownOpen((prev) => !prev);
 
   return (
     <header className="flex items-center justify-between pl-4 pr-4 pt-8 pb-8 relative">
@@ -42,7 +32,7 @@ function HeaderSection() {
         <div>
           <img src="/images/logo.svg" alt="logo image" />
         </div>
-        <nav className="md:hidden">
+        <nav className="">
           {/* MOBILE SIDEBAR */}
           {isOpen && (
             <div className="text-[hsl(0,0%,41%)] font-semibold bg-white absolute top-0 right-0 h-screen w-[50%] pt-16 pl-8 pr-8">
@@ -81,7 +71,7 @@ function HeaderSection() {
                                 <span>Planning</span>
                             </li>
                         </ul>
-                    )}
+                    )} 
                   </li>
                   <li
                     onClick={handleMobileCompanyDropdown}
@@ -107,7 +97,7 @@ function HeaderSection() {
                         )}
                     </div>
                   </li>
-                  <li>Careers</li>
+                  <li className="cursor-pointer">Careers</li>
                   <li className="cursor-pointer">About</li>
                 </ul>
               </div>
