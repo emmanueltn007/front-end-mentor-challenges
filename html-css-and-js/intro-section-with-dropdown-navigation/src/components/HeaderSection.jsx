@@ -33,7 +33,7 @@ function HeaderSection() {
 
   const handleCompanyDropdown = () => setIsCompanyDropdownOpen((prev) => !prev);
   return (
-    <header className="flex items-center justify-between pl-4 pr-4 pt-8 pb-8 relative">
+    <header className="flex items-center justify-between pl-4 pr-4 pt-8 pb-8 md:pl-16 md:pr-16 relative">
       <div className="flex gap-8">
         <div>
           <img src="/images/logo.svg" alt="logo image" />
@@ -82,7 +82,7 @@ function HeaderSection() {
           {/* MOBILE NAVBAR */}
           {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           <div 
-              className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden absolute w-[50%] right-16 top-16 ${
+              className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden absolute w-[50%] p-8 h-screen right-0 top-16 ${
                 isOpen ? "block" : "hidden"}`}
             >
             <ul className="flex flex-col gap-4">
