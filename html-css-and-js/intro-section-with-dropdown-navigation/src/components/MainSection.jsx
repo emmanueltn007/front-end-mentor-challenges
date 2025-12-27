@@ -13,7 +13,7 @@ function MainSection () {
                     alt="desktop hero image" 
                 />
             </section>
-            <section className="md:row-start-1 flex flex-col max-md:items-center max-md:text-center justify-between max-md:pl-8 max-md:pr-8 max-md:pt-16 max-md:pb-16">
+            <section className="md:row-start-1 flex flex-col max-md:items-center max-md:text-center justify-between max-md:pl-8 max-md:pr-8 max-md:pt-12 max-md:pb-12">
                 <h1 className="text-4xl md:text-8xl text-[hsl(0,0%,8%)] font-bold">
                     Make remote work
                 </h1>
