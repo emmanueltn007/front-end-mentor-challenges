@@ -2,7 +2,7 @@ function Dropdown ({ label, isOpen, onToggle, children }) {
     return (
         <li 
             onClick={onToggle}
-            className="cursor-pointer"
+            className="cursor-pointer flex flex-col gap-4"
         >
             <div className="flex gap-4 items-center">
                 <span>{label}</span>

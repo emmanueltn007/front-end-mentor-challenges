@@ -29,5 +29,3 @@ The designs were created to the following widths:
 - Weights: 500, 700
 
 > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
-
-bg-white flex flex-col gap-2 rounded-md shadow-md shadow-gray-500 p-4 absolute

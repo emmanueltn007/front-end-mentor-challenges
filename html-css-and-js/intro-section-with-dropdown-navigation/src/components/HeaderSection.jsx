@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Dropdown from "./Dropdown";
 import FeaturesList from "./FeaturesList";
+import CompanyList from "./CompanyList";
 
 function HeaderSection() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,10 +12,13 @@ function HeaderSection() {
     /* MOBILE SIDEBAR */
   }
 
-  const [isMobileFeaturesDropdownOpen, setIsMobileFeaturesDropdownOpen] =
-    useState(false);
-  const [isMobileCompanyDropdownOpen, setIsMobileCompanyDropdownOpen] =
-    useState(false);
+  const [isMobileFeaturesDropdownOpen, setIsMobileFeaturesDropdownOpen] = useState(false);
+   
+  const [isMobileCompanyDropdownOpen, setIsMobileCompanyDropdownOpen] = useState(false);
+  
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   const handleToggleMenu = () => setIsOpen((prev) => !prev);
 
@@ -48,18 +52,17 @@ function HeaderSection() {
               isOpen={isFeaturesDropdownOpen}
               onToggle={handleFeaturesDropdown}
             >
-              <FeaturesList className="bg-white flex flex-col gap-2 rounded-md shadow-md shadow-gray-500 p-4 absolute" />
+              <FeaturesList className="text-sm bg-white flex flex-col gap-2 rounded-md shadow-md shadow-gray-500 p-2 absolute top-20" />
             </Dropdown>
             <Dropdown
               label="Company"
               isOpen={isCompanyDropdownOpen}
               onToggle={handleCompanyDropdown}
             >
-              <ul className="flex flex-col gap-2 absolute bg-white shadow-md shadow-gray-500 rounded-md p-4">
-                <li className="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">History</li>
-                <li className="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">Our Team</li>
-                <li className="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">Blog</li>
-              </ul>
+              <CompanyList 
+                listClass="text-sm bg-white flex flex-col gap-2 rounded-md shadow-md shadow-gray-500 p-2 absolute top-20"
+                itemClass="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out"
+              />
             </Dropdown>
             <li>Careers</li>
             <li>About</li>
@@ -72,24 +75,20 @@ function HeaderSection() {
               className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden fixed w-1/2 pl-8 pr-8 pt-16 h-screen right-0 top-0 ${
                 isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
             >
-            <ul >
+            <ul className="flex flex-col gap-4">
               <Dropdown
                 label="Features"
                 isOpen={isMobileFeaturesDropdownOpen}
                 onToggle={handleMobileFeaturesDropdown}
               >
-                <FeaturesList className="ml-8" />
+                <FeaturesList className="ml-8 flex flex-col gap-2" />
               </Dropdown>
               <Dropdown
                 label="Company"
                 isOpen={isMobileCompanyDropdownOpen}
                 onToggle={handleMobileCompanyDropdown}
               >
-                <ul>
-                  <li className="ml-8 hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">History</li>
-                  <li className="ml-8 hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">Our Team</li>
-                  <li className="ml-8 hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">Blog</li>
-                </ul>
+                <CompanyList listClass="flex flex-col gap-2 ml-8" itemClass="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out" />
               </Dropdown>
               <li className="cursor-pointer">Careers</li>
               <li className="cursor-pointer">About</li>
