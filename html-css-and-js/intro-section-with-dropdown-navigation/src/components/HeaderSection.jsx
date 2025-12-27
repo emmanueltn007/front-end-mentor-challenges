@@ -69,8 +69,8 @@ function HeaderSection() {
           {/* MOBILE NAVBAR */}
           {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           <div 
-              className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden absolute w-[50%] p-8 h-screen right-0 top-16 ${
-                isOpen ? "block" : "hidden"}`}
+              className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden fixed w-1/2 pl-8 pr-8 pt-16 h-screen right-0 top-0 ${
+                isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
             >
             <ul >
               <Dropdown
