@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Dropdown from "./Dropdown";
-import features from "../../data/features";
+import FeaturesList from "./FeaturesList";
 
 function HeaderSection() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,20 +48,7 @@ function HeaderSection() {
               isOpen={isFeaturesDropdownOpen}
               onToggle={handleFeaturesDropdown}
             >
-              <ul className="bg-white flex flex-col gap-2 rounded-md shadow-md shadow-gray-500 p-4 absolute">
-                {features.map((feature) => {
-                  return (
-                    <li className="flex gap-4 items-center hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">
-                      <img
-                        className="h-4 w-auto"
-                        src={feature.image}
-                        alt={feature.alt}
-                      />
-                      <span>{feature.dropdownItem}</span>
-                    </li>
-                  );
-                })}
-              </ul>
+              <FeaturesList className="bg-white flex flex-col gap-2 rounded-md shadow-md shadow-gray-500 p-4 absolute" />
             </Dropdown>
             <Dropdown
               label="Company"
@@ -85,26 +72,13 @@ function HeaderSection() {
               className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden absolute w-[50%] p-8 h-screen right-0 top-16 ${
                 isOpen ? "block" : "hidden"}`}
             >
-            <ul className="flex flex-col gap-4">
+            <ul >
               <Dropdown
                 label="Features"
                 isOpen={isMobileFeaturesDropdownOpen}
                 onToggle={handleMobileFeaturesDropdown}
               >
-                {features.map((feature) => {
-                  return (
-                    <ul>
-                      <li className="flex items-center gap-4 ml-8 hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">
-                        <img
-                          className="h-4 w-auto"
-                          src={feature.image}
-                          alt={feature.alt}
-                        />
-                        <span>{feature.dropdownItem}</span>
-                      </li>
-                    </ul>
-                  );
-                })}
+                <FeaturesList className="ml-8" />
               </Dropdown>
               <Dropdown
                 label="Company"
