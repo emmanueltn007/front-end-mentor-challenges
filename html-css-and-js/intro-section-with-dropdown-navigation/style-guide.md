@@ -29,3 +29,8 @@ The designs were created to the following widths:
 - Weights: 500, 700
 
 > 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+
+<img 
+                    className={`w-3 h-2 text-[hsl(0,0%,41%)] transition duration-150 ease-in-out ${isOpen ? "rotate-180 text-[hsl(0,0%,8%)]" : ""}`}
+                    src="/images/icon-arrow-down.svg" alt="arrow icon"
+                />
