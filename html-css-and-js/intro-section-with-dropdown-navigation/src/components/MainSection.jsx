@@ -26,7 +26,7 @@ function MainSection () {
                                 hover:border-[hsl(0,0%,8%)] hover:text-[hsl(0,0%,8%)] hover:bg-white transition-all duration-150 ease-in-out">
                     Learn more
                 </button>
-                <div className="flex gap-8 justify-between">
+                <div className="flex gap-4 md:gap-8 justify-between">
                     <img className="h-4 w-auto" src="/images/client-databiz.svg" alt="databiz icon" />
                     <img className="h-8 w-auto" src="/images/client-audiophile.svg" alt="audiophile icon" />
                     <img className="h-6 w-auto" src="/images/client-meet.svg" alt="meet icon" />

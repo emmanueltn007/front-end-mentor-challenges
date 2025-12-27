@@ -64,8 +64,8 @@ function HeaderSection() {
                 itemClass="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out"
               />
             </Dropdown>
-            <li>Careers</li>
-            <li>About</li>
+            <li className="cursor-pointer hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">Careers</li>
+            <li className="cursor-pointer hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">About</li>
           </ul>
 
           {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
@@ -90,8 +90,8 @@ function HeaderSection() {
               >
                 <CompanyList listClass="flex flex-col gap-2 ml-8" itemClass="hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out" />
               </Dropdown>
-              <li className="cursor-pointer">Careers</li>
-              <li className="cursor-pointer">About</li>
+              <li className="cursor-pointer hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">Careers</li>
+              <li className="cursor-pointer hover:text-[hsl(0,0%,8%)] transition duration-150 ease-in-out">About</li>
             </ul>
             <div className="flex flex-col gap-4">
               <button 
