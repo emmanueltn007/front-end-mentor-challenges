@@ -20,25 +20,44 @@ function HeaderSection() {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
-  const handleToggleMenu = () => setIsOpen((prev) => !prev);
+  const handleToggleMenu = () => setIsOpen(true);
 
-  const handleMobileFeaturesDropdown = () =>
+  const handleOpenMenu = () => setIsOpen(false);
+
+  const handleMobileFeaturesDropdown = () => {
     setIsMobileFeaturesDropdownOpen((prev) => !prev);
-
-  const handleMobileCompanyDropdown = () =>
+    setIsMobileCompanyDropdownOpen(false);
+  }
+    
+  const handleMobileCompanyDropdown = () => {
     setIsMobileCompanyDropdownOpen((prev) => !prev);
+    setIsMobileFeaturesDropdownOpen(false);
+  }
+    
 
-  {
-    /* DESKTOP FUNCTIONS */
+  {/* DESKTOP FUNCTIONS */}
+
+  const handleFeaturesDropdown = () => {
+    setIsFeaturesDropdownOpen((prev) => !prev);
+    setIsCompanyDropdownOpen(false);
+  }
+  const handleCompanyDropdown = () => {
+    setIsCompanyDropdownOpen((prev) => !prev);
+    setIsFeaturesDropdownOpen(false);
   }
 
-  const handleFeaturesDropdown = () =>
-    setIsFeaturesDropdownOpen((prev) => !prev);
-
-  const handleCompanyDropdown = () => setIsCompanyDropdownOpen((prev) => !prev);
   return (
     <header className="flex items-center justify-between pl-4 pr-4 pt-8 pb-8 md:pl-16 md:pr-16 relative">
+      {/* DARK BACKGROUND OVERLAY (MOBILE) */}
+      {isOpen && (
+        <div 
+          onClick={handleToggleMenu}
+          className="fixed inset-0 bg-black/40 z-40 md:hidden"
+        ></div>
+      )}
+
       <div className="flex gap-8">
+        {/* LOGO NAV */}
         <div>
           <img src="/images/logo.svg" alt="logo image" />
         </div>
@@ -73,8 +92,11 @@ function HeaderSection() {
           {/* ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
           <div 
               className={`bg-white flex flex-col gap-4 text-[hsl(0,0%,41%)] font-semibold md:hidden fixed w-1/2 pl-8 pr-8 pt-16 h-screen right-0 top-0 ${
-                isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300`}
+                isOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 z-100`}
             >
+              <button onClick={handleOpenMenu} className="cursor-pointer absolute top-8 right-4">
+                <img src="/images/icon-close-menu.svg" alt="close menu icon" />
+              </button>
             <ul className="flex flex-col gap-4">
               <Dropdown
                 label="Features"
@@ -120,13 +142,11 @@ function HeaderSection() {
         </button>
         <button
           onClick={handleToggleMenu}
-          className="md:hidden cursor-pointer absolute w-6 h-6 right-8 top-8"
+          className="md:hidden cursor-pointer w-6 h-6"
         >
           <img
             className="w-6 h-6"
-            src={
-              isOpen ? "/images/icon-close-menu.svg" : "/images/icon-menu.svg"
-            }
+            src="/images/icon-menu.svg"
             alt="menu icon"
           />
         </button>
