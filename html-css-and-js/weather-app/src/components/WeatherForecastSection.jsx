@@ -1,9 +1,10 @@
 import DailyForecast from "./DailyForecast";
+import HourlyForecast from "./HourlyForecast";
 import TodaysWeatherStats from "./TodaysWeatherStats";
 
 function WeatherForecastSection () {
     return (
-        <section className="md:grid md:grid-cols-[2fr_1fr] mt-8">
+        <section className="md:grid md:grid-cols-[2fr_1fr] mt-8 gap-4">
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col md:items-center text-[hsl(0,0%,100%)] 
                                 max-md:bg-[url('/assets/images/bg-today-small.svg')] 
@@ -27,7 +28,7 @@ function WeatherForecastSection () {
                 <TodaysWeatherStats />
                 <DailyForecast />
             </div>
-            <div></div>
+            <HourlyForecast />
         </section>
     );
 }
