@@ -8,8 +8,7 @@ function DailyForecast () {
         {day: "Sat", icon: "/assets/images/icon-snow.webp", minTemp: "25°", maxTemp: "16°"},
         {day: "Sun", icon: "/assets/images/icon-fog.webp", minTemp: "24°", maxTemp: "15°"}
     ];
-
-    console.log(dailyWeatherForecast);
+    
     return (
         <div className="flex flex-col gap-4">
             <span className="text-[hsl(0,0%,100%)]">
