@@ -1,3 +1,4 @@
+import DailyForecast from "./DailyForecast";
 import TodaysWeatherStats from "./TodaysWeatherStats";
 
 function WeatherForecastSection () {
@@ -24,6 +25,7 @@ function WeatherForecastSection () {
                     </div>
                 </div>
                 <TodaysWeatherStats />
+                <DailyForecast />
             </div>
             <div></div>
         </section>
