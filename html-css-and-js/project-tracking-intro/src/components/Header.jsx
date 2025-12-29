@@ -1,4 +1,5 @@
 import { useState } from "react";
+import NavLinks from "./NavLinks";
 
 function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,11 +33,7 @@ function Header() {
                       bg-white shadow-md shadow-gray-500 absolute top-24 left-8 right-8 rounded-md p-8
                         flex flex-col items-center gap-4 font-semibold
                       `}>
-          <ul className="flex flex-col text-center gap-4 text-[hsl(230,29%,20%)]">
-            <li>PRODUCT</li>
-            <li>FEATURES</li>
-            <li>PRICING</li>
-          </ul>
+          <NavLinks className="flex flex-col text-center gap-4 text-[hsl(230,29%,20%)]" />
           <hr className="w-full text-gray-500" />
           <button className="text-gray-500 cursor-pointer">LOGIN</button>
         </div>
@@ -44,11 +41,7 @@ function Header() {
 
       {/* DESKTOP NAV */}
       <nav className="max-md:hidden flex flex-row gap-4 font-semibold">
-        <ul className="flex gap-4 text-[hsl(230,29%,20%)]">
-          <li>PRODUCT</li>
-          <li>FEATURES</li>
-          <li>PRICING</li>
-        </ul>
+        <NavLinks className="flex gap-4 text-[hsl(230,29%,20%)]" />
         <button className="font-semibold text-gray-500 cursor-pointer">LOGIN</button>
       </nav>
     </header>
