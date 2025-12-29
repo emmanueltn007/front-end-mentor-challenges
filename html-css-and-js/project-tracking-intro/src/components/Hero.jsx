@@ -1,10 +1,10 @@
 function Hero () {
     return (
-        <main className="grid md:grid-cols-2 mt-16">
-            <section className="md:col-start-2 -z-9">
+        <main className="grid md:grid-cols-2 mt-16 z-10">
+            <section className="md:col-start-2">
                 <img className="h-full w-auto" src="/images/illustration-devices.svg" alt="illustration of devices" />
             </section>
-            <section className="flex flex-col justify-center gap-4 md:row-start-1">
+            <section className="flex flex-col justify-center gap-4 md:row-start-1 z-20 ">
                 <span className="flex items-center gap-1 text-gray-500 py-8">
                     <span 
                         className="text-white bg-[hsl(230,29%,20%)] py-1 px-2 rounded-2xl"
