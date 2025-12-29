@@ -35,14 +35,25 @@ function Header() {
                       `}>
           <NavLinks className="flex flex-col text-center gap-4 text-[hsl(230,29%,20%)]" />
           <hr className="w-full text-gray-500" />
-          <button className="text-gray-500 cursor-pointer">LOGIN</button>
+          <button 
+            className="text-gray-500 cursor-pointer relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0
+                        after:h-0.5 after:w-full after:bg-gray-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+          >
+            LOGIN
+          </button>
         </div>
       </nav>
 
       {/* DESKTOP NAV */}
-      <nav className="max-md:hidden flex flex-row gap-4 font-semibold">
+      <nav className="max-md:hidden flex items-center flex-row gap-4 font-semibold">
         <NavLinks className="flex gap-4 text-[hsl(230,29%,20%)]" />
-        <button className="font-semibold text-gray-500 cursor-pointer">LOGIN</button>
+        <span className="bg-gray-500 h-1 w-1 rounded-full"></span>
+        <button 
+          className="font-semibold text-gray-500 cursor-pointer relative inline-block after:content-[''] after:absolute after:left-0 after:bottom-0
+                                    after:h-0.5 after:w-full after:bg-gray-500 after:scale-x-0 after:origin-left after:transition-transform after:duration-300 hover:after:scale-x-100"
+        >
+          LOGIN
+        </button>
       </nav>
     </header>
   );
