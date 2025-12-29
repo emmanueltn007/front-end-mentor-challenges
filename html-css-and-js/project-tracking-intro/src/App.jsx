@@ -1,6 +1,10 @@
+import Header from "./components/Header";
+
 function App () {
   return (
-    <h1>Hello World</h1>
+    <div className="px-8 py-12 md:px-12 md:py-16">
+      <Header />
+    </div>
   );
 }
 
